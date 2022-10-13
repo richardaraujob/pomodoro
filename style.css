@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #1F1B2E;
+    color: #FFFFFF;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#ww {
+    width: 75%;
+    height: 5px;
+}
+
+#rr {
+    width: calc(100% - 0.1%);
+    height: 5px;
+    background-color: #554FFF;
+    border-radius: 5px;
+}
+
+#pomodoro {
+    width: 75%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+#pomodoro form {
+    display: flex;
+    gap: 10px;
+}
+
+#timer{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #222230;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 44px;
+}
+
+#contagem {
+    font-size: 34px;
+    width: 50%;
+    background-color: #222230;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+#contagem.display {
+    font-size: 44px;
+}
+
+#start, #pause, #stop, #recomecar {
+    background-color: #664EFF;
+    border: none;
+    color: #FFFFFF;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#stop {
+    position: absolute;
+}
+
+#start svg, #pause svg, #stop svg, #recomecar svg {
+    margin-top: 3px;
+}
+
+#insert-timer {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 2px solid #554FFF;
+    background-color: #222230;
+}
+
+#insert-timer.display {
+    display: flex;
+}
+
+#insert-timer form {
+    width: 25%;
+    height: 40px;
+    padding: 7px;
+    background-color: #554FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+}
+
+#insert-timer form input {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #554FFF;
+    color: #FFFFFF;
+    font-size: 17px;
+}
+
+#edit {
+    background-color: #664EFF;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#edit svg {
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+#back {
+    background-color: #664EFF;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
