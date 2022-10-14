@@ -20,12 +20,12 @@ body {
 }
 
 #ww {
-    width: 75%;
+    width: 50%;
     height: 5px;
 }
 
-#rr {
-    width: calc(100% - 0.1%);
+#barra-contagem {
+    transition: width 1s ease-in-out;
     height: 5px;
     background-color: #554FFF;
     border-radius: 5px;
@@ -33,7 +33,7 @@ body {
 
 #pomodoro {
     width: 75%;
-    height: 50%;
+    height: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
