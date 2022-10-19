@@ -47,7 +47,7 @@ buttonStart.addEventListener("click", () => {
 
     let duration = 60 * document.querySelector("#time").value;
     let display = document.querySelector("#contagem");
-    const audioPlay = new Audio ("https://richardaraujob.github.io/pomodoro/play.wav");
+    const audioPlay = new Audio (src="https://richardaraujob.github.io/pomodoro/play.wav");
     
     timer(duration, display)
     audioPlay.play();
