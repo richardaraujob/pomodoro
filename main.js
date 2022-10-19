@@ -29,7 +29,16 @@ function timer(duration, display) {
         if(--timert < 0) {
             timert = duration;
         }
+
+        if(display.innerHTML.includes("00:00")) {
+            clearInterval(cron)
+
+            const despertar = new Audio ('songs/despertar.wav');
+
+            despertar.play();
+        }
         
+
     }, 1000);
    
 };
@@ -38,12 +47,15 @@ buttonStart.addEventListener("click", () => {
 
     let duration = 60 * document.querySelector("#time").value;
     let display = document.querySelector("#contagem");
+    const audioPlay = new Audio ("songs/play.wav");
     
     timer(duration, display)
+    audioPlay.play();
 
     document.querySelector("#stop").removeAttribute("hidden", "hidden");
     document.querySelector("#edit").setAttribute("hidden", "hidden");
-    document.querySelector("#contagem").classList.toggle("display");
+    document.querySelector("#contagem").style.fontSize= "44px";
+    document.querySelector("#insert-timer").style.display = "none";
     document.querySelector("#pause").removeAttribute("hidden", "hidden");
     document.querySelector("#barra-contagem").removeAttribute("hidden", "hidden");
 
@@ -51,7 +63,7 @@ buttonStart.addEventListener("click", () => {
 
 buttonEdit.addEventListener("click", () => {
 
-    document.querySelector("#insert-timer").classList.toggle("display");
+    document.querySelector("#insert-timer").style.display = "flex";
 
 });
 
@@ -61,7 +73,7 @@ buttonBack.addEventListener("click", () => {
 
     altereValue = altereValue < 10 ? "0" + altereValue : altereValue;
 
-    document.querySelector("#insert-timer").classList.remove("display");
+    document.querySelector("#insert-timer").style.display = "none";
     document.querySelector("#cont").value = document.querySelector("#time").value;
     document.querySelector("#contagem").innerHTML = altereValue + ":" + "00";
 
@@ -87,10 +99,10 @@ buttonStop.addEventListener("click", () => {
     document.querySelector("#stop").setAttribute("hidden", "hidden");
     document.querySelector("#contagem").innerHTML = altereValue + ":" + "00";
     document.querySelector("#edit").removeAttribute("hidden", "hidden");
-    document.querySelector("#contagem").classList.remove("display");
     document.querySelector("#recomecar").setAttribute("hidden", "hidden");
     document.querySelector("#pause").setAttribute("hidden", "hidden");
     document.querySelector("#barra-contagem").setAttribute("hidden", "hidden");
+    document.querySelector("#contagem").style.fontSize= "34px";
 
 });
 
@@ -101,8 +113,10 @@ buttonRecomecar.addEventListener("click", () => {
     let seconds = Number(minutesAndSeconds[1]); 
     let duration = 60 * minutes + seconds;
     let display = document.querySelector("#contagem");
+    const audioPlay = new Audio ("songs/play.wav");
 
     timer(duration, display)
+    audioPlay.play();
 
     document.querySelector("#recomecar").setAttribute("hidden", "hidden");
     document.querySelector("#pause").removeAttribute("hidden", "hidden");
