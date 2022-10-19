@@ -67,10 +67,6 @@ body {
     text-align: center;
 }
 
-#contagem.display {
-    font-size: 44px;
-}
-
 #start, #pause, #stop, #recomecar {
     background-color: #664EFF;
     border: none;
@@ -101,10 +97,6 @@ body {
     gap: 20px;
     border: 2px solid #554FFF;
     background-color: #222230;
-}
-
-#insert-timer.display {
-    display: flex;
 }
 
 #insert-timer form {
