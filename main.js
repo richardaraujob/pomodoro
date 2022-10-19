@@ -33,7 +33,7 @@ function timer(duration, display) {
         if(display.innerHTML.includes("00:00")) {
             clearInterval(cron)
 
-            const despertar = new Audio ('songs/despertar.wav');
+            const despertar = new Audio ("https://richardaraujob.github.io/pomodoro/despertar.wav");
 
             despertar.play();
         }
@@ -47,7 +47,7 @@ buttonStart.addEventListener("click", () => {
 
     let duration = 60 * document.querySelector("#time").value;
     let display = document.querySelector("#contagem");
-    const audioPlay = new Audio ("songs/play.wav");
+    const audioPlay = new Audio ("https://richardaraujob.github.io/pomodoro/play.wav");
     
     timer(duration, display)
     audioPlay.play();
@@ -113,7 +113,7 @@ buttonRecomecar.addEventListener("click", () => {
     let seconds = Number(minutesAndSeconds[1]); 
     let duration = 60 * minutes + seconds;
     let display = document.querySelector("#contagem");
-    const audioPlay = new Audio ("songs/play.wav");
+    const audioPlay = new Audio ("https://richardaraujob.github.io/pomodoro/play.wav");
 
     timer(duration, display)
     audioPlay.play();
