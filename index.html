@@ -8,12 +8,24 @@
     <link rel="stylesheet" href="https://richardaraujob.github.io/pomodoro/style.css">
 </head>
 <body>
-    <div id="pomodoro">
+    <div id="pomodoro-timer">
         <div id="timer">
+            <div>
+                <button id="pomodoro">Pomodoro</button>
+                <button id="break">Break</button>
+            </div>
             <div id="contagem">25:00</div>
+            <div id="break-contagem" hidden>05:00</div>
             <div id="insert-timer">
                 <form>
-                    <input type="number" id="time" value="25">
+                    <div>
+                        <label for="time">pomodoro:</label><br>
+                        <input type="number" id="time" value="25">
+                    </div>
+                    <div>
+                        <label for="break-time">break:</label><br>
+                        <input type="number" id="break-time" value="5">
+                    </div>
                 </form>
                 <button type="button" id="back">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18">
