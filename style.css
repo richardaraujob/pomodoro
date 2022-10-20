@@ -31,7 +31,7 @@ body {
     border-radius: 5px;
 }
 
-#pomodoro {
+#pomodoro-timer {
     width: 75%;
     height: 60%;
     display: flex;
@@ -41,14 +41,14 @@ body {
     gap: 40px;
 }
 
-#pomodoro form {
+#pomodoro-timer form {
     display: flex;
     gap: 10px;
 }
 
 #timer{
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     background-color: #222230;
     display: flex;
@@ -59,7 +59,7 @@ body {
     font-size: 44px;
 }
 
-#contagem {
+#contagem, #break-contagem {
     font-size: 34px;
     width: 50%;
     background-color: #222230;
@@ -87,8 +87,8 @@ body {
 
 #insert-timer {
     position: absolute;
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     display: none;
     flex-direction: column;
@@ -100,24 +100,34 @@ body {
 }
 
 #insert-timer form {
-    width: 25%;
-    height: 40px;
-    padding: 7px;
-    background-color: #554FFF;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
+}
 
+#insert-timer form div {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 #insert-timer form input {
-    width: 100%;
+    width: 60px;
+    height: 40px;
+    padding: 7px;
+    border-radius: 10px;
     outline: none;
     border: none;
     background-color: #554FFF;
     color: #FFFFFF;
     font-size: 17px;
+}
+
+#insert-timer form label {
+    font-size: 14px;
 }
 
 #edit {
@@ -144,4 +154,18 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+#break, #pomodoro {
+    height: 30px;
+    background-color: #1F1B2E;
+    color: #664EFF;
+    border: none;
+    padding: 0 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#break.active, #pomodoro.active {
+    border: 1px solid #554FFF;
 }
